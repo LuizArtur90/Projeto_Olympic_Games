@@ -12,10 +12,11 @@ json_file = r'C:\Jornada\Olimpyc_Games\data\olympics_dataset.json'
 
 # Ler o arquivo CSV
 df = pd.read_csv(csv_file)
-#df_json = pd.read_json(json_file)
+df_json = pd.read_json(json_file)
 
 # Converter o DataFrame para JSON e salvar o arquivo
-#df.to_json(json_file, orient='records', indent=4)
+df.to_json(json_file, orient='records', indent=4)
+
 
 engine = create_engine('postgresql://postgres:admin@localhost:5432/Olympic_games')
 #Importar arquivo Json para o database.
